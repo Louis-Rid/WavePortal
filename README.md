@@ -4,9 +4,13 @@
 This README provides an overview of the smart contract code contained in this repository. The smart contract is called "WavePortal" and it allows users to wave and keep track of the total number of waves.
 
 ## Files
-The repository contains a single file:
+The important files in this repository are:
 
 1. `WavePortal.sol`: This is the main Solidity file that contains the smart contract code. It defines the contract and its associated functions, variables, and events.
+
+2. `run.js`: This JavaScript file contains a script for deploying the WavePortal contract, interacting with it, and logging various details such as contract deployment address and total waves.
+
+3. `deploy.js`: This JavaScript file contains a script for deploying the WavePortal contract and logging the address it is deployed to.
 
 ## Requirements
 To compile and interact with the smart contract, you will need the following:
@@ -22,9 +26,14 @@ Follow these steps to compile and deploy the smart contract:
 
 2. Open a terminal and navigate to the project directory.
 
-3. Compile the smart contract by running the following command:
-
-4. Deploy the smart contract on a specific blockchain network (e.g., local development network, testnet, or mainnet) by configuring the deployment settings in the `hardhat.config.js` file and running the deployment script.
+3. Compile the smart contract by running the following command: 
+```
+yarn hardhat compile
+```
+4. Deploy the smart contract by running the deployment script using the following command:
+```
+yarn hardhat run scripts/deploy.js --network localhost
+```
 
 ## Interacting with the Smart Contract
 After deploying the smart contract, you can interact with it using the following methods:
