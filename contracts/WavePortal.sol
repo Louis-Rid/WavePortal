@@ -10,11 +10,6 @@ contract WavePortal {
     // Mappings
     mapping(address => uint256) public wavers;
 
-    // Constructor
-    constructor() {
-        console.log("Yo yo! I am a contract, and I am smart!");
-    }
-
     // Functions
     function wave() public {
         wavers[msg.sender] += 1;
