@@ -44,8 +44,6 @@ const main = async () => {
 
     // Tests getAllWaves() function
     let allWaves = await waveContract.getAllWaves();
-    console.log(allWaves)
-
 }
 
 
