@@ -22,15 +22,12 @@ contract WavePortal {
     Wave[] waves;
 
     // Constructor
-    constructor() payable {
-        console.log("We have been constructed!");
-    }
+    constructor() payable {}
 
     // Functions
     function wave(string memory _message) public {
         wavers[msg.sender] += 1;
         totalWaves += 1;
-        console.log("%s has waved and said '%s'", msg.sender, _message);
 
         // Store wave in waves array
         waves.push(Wave(msg.sender, _message, block.timestamp));
@@ -51,7 +48,6 @@ contract WavePortal {
 
     // Getters
     function getTotalWaves() public view returns (uint256) {
-        console.log("We have %d total waves!", totalWaves);
         return totalWaves;
     }
 
