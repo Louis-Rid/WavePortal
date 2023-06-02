@@ -35,7 +35,6 @@ contract WavePortal {
     function wave(string memory _message) public {
         wavers[msg.sender] += 1;
         totalWaves += 1;
-        console.log("%s has waved and said '%s'", msg.sender, _message);
 
         // Require waver to not have waved in the last 15 minutes
         require(
@@ -71,7 +70,6 @@ contract WavePortal {
 
     // Getters
     function getTotalWaves() public view returns (uint256) {
-        console.log("We have %d total waves!", totalWaves);
         return totalWaves;
     }
 
