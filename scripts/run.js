@@ -27,10 +27,16 @@ const main = async () => {
 
   await waveContract.getTotalWaves();
 
+  await waveContract.getTotalWaves();
+
   // Verifys the wavers are being stored in mapping
-  const waves = await waveContract.getTotalWavesForAddress(
-    randomPerson.address
-  );
+  const waves = await waveContract.getTotalWavesForAddress(randomPerson.address);
+  console.log(`${randomPerson.address} has waved ${waves} times`)
+
+  // Tests getAllWaves() function
+  let allWaves = await waveContract.getAllWaves();
+}
+
 
   // Tests getAllWaves() function
   let allWaves = await waveContract.getAllWaves();
